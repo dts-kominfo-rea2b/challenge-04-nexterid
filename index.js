@@ -10,8 +10,12 @@ const dates = [
 // TODO: Buatlah fungsi createDate
 const createDate = (date, posisi = null) => {
   let dateEpoch = [];
-  for (let index = 0; index < date.length; index++) {
-    dateEpoch.push(Date.parse(date[index]).toString().slice(0, -3));
+  // for (let index = 0; index < date.length; index++) {
+  //   dateEpoch.push(Date.parse(date[index]).toString().slice(0, -3));
+  // }
+  //menggunakan for in
+  for (const key in date) {
+    dateEpoch.push(Date.parse(date[key]).toString().slice(0, -3));
   }
   // return dateEpoch.join("-");
 
